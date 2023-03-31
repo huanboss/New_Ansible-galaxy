@@ -1,18 +1,18 @@
 ---
 
-# - hosts: base
-#   become: true
-#   roles:
-#     - base
+- hosts: base
+  become: true
+  roles:
+    - base
 
-# - hosts: db
-#   become: true
-#   roles: 
-#     - db
+- hosts: db
+  become: true
+  roles: 
+    - db
 
-# - hosts: web
-#   become: true
-#   roles: 
+- hosts: web
+  become: true
+  roles: 
 #     - web 
 
       # - name: use yum module
