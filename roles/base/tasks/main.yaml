@@ -1,0 +1,10 @@
+---
+- name: add User2
+  user:
+    name: u2 
+    groups: root
+
+- name: add ssh
+  ansible.builtin.authorized_key:
+    user: U1
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE/Zi3VIwzFcOPAYRSbrL/GWwVZqpMCw6yCAUHiNOGY0 ansible"

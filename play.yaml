@@ -1,0 +1,81 @@
+---
+
+# - hosts: base
+#   become: true
+#   roles:
+#     - base
+
+# - hosts: db
+#   become: true
+#   roles: 
+#     - db
+
+# - hosts: web
+#   become: true
+#   roles: 
+#     - web 
+
+      # - name: use yum module
+      #   ansible.builtin.package:
+      #     name:
+      #       - httpd
+      #       - nginx
+      #       - postgresql
+      #     state: absent
+      #   when: ansible_os_family == 'RedHat'
+      # - name: use apt module
+      #   apt:
+      #     name:
+      #       - apache2
+      #     state: present
+      #   when: ansible_os_family == 'Debian'
+      # - name: start service
+      #   ansible.builtin.service:
+      #     name: nginx
+      #     state: started
+      #   ignore_errors: true
+
+      # - name: start service
+      #   ansible.builtin.service:
+      #     name: httpd
+      #     state: started
+      #   ignore_errors: true
+      # - name: Print all gathered facts
+      #   debug:
+      #     var: ansible_facts
+      # - name: copy file from folder files local
+      #   ansible.builtin.copy:
+      #     src: a1.txt
+      #     dest: /
+      # - name: use lineinfile
+      #   ansible.builtin.lineinfile:
+      #     path: /var/a1.txt
+      #     regexp: "^hello world"
+      #     line: xin chao
+      #   register: flag
+
+      # - name: restart service
+      #   ansible.builtin.service:
+      #     name: httpd
+      #     state: started
+      #   when: flag.changed
+
+      # - name: add ssh
+      #   ansible.builtin.authorized_key:
+      #     user: U1
+      #     key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE/Zi3VIwzFcOPAYRSbrL/GWwVZqpMCw6yCAUHiNOGY0 ansible"
+
+      # - name: add sudoer
+      #   ansible.builtin.copy:
+      #     src: sudoer
+      #     dest: /etc/sudoers.d/U1
+      #     owner: root
+      #     group: root
+
+
+# --------------- this is example about vars_files
+# - hosts: all
+#   vars_files:
+#     - varfile.yaml
+#   tasks:
+#   - debug: msg="Hello {{your_name}} from {{location}}"

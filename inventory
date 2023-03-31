@@ -1,0 +1,10 @@
+[base]
+192.168.1.223 ansible_user=root ansible_password="Nutanix/4u"
+192.168.1.220 ansible_user=root ansible_password="Nutanix/4u"
+192.168.1.67 ansible_user=root ansible_password="Nutanix/4u"
+
+[db]
+192.168.1.223 ansible_user=root ansible_password="Nutanix/4u"
+
+[web]
+192.168.1.220 ansible_user=root ansible_password="Nutanix/4u"

@@ -1,0 +1,5 @@
+- name: install mariaDb server package
+  ansible.builtin.dnf:
+    name:
+      - mariadb
+    state: latest

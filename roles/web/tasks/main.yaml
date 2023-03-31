@@ -1,0 +1,13 @@
+- name: install https package
+  ansible.builtin.dnf:
+    name:
+      - httpd
+      - php
+    state: latest
+
+- name: start and enable httpd
+  ansible.builtin.service:
+    name: httpd
+    state: started
+    enabled: yes
+    
